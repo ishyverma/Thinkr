@@ -93,7 +93,6 @@ const config: Config = {
   		},
   		animation: {
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-  			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear'
   		},
   		keyframes: {
   			'border-beam': {
@@ -101,11 +100,6 @@ const config: Config = {
   					'offset-distance': '100%'
   				}
   			},
-  			'border-beam': {
-  				'100%': {
-  					'offset-distance': '100%'
-  				}
-  			}
   		}
   	}
   },
