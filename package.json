@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "postinstall": "vercel env pull .env && npx prisma generate",
+    "postinstall": "npx prisma generate",
     "build": "npx prisma migrate deploy && next build",
     "start": "next start",
     "lint": "next lint"
