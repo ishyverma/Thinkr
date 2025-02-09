@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "postinstall": "npx prisma generate",
+    "postinstall": "echo \"DATABASE_URL=$DATABASE_URL\" > .env && npx prisma generate",
     "build": "npx prisma migrate deploy && next build",
     "start": "next start",
     "lint": "next lint"
