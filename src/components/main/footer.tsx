@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const Footer = () => {
     const theme = useTheme();
-    const shadowColor = theme.resolvedTheme === "dark" ? "dark" : "white";
 
     return (  
         <div className="bg-white text-black font-grotsek flex justify-center items-center py-10 pt-20">

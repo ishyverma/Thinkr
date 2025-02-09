@@ -7,7 +7,9 @@ interface MarkdownProps {
     text: string;
 }
 
-const md: any = markdownit({
+type mdType = any
+
+const md: mdType = markdownit({
     highlight: function (str, lang) {
         if (lang && hljs.getLanguage(lang)) {
             try {
@@ -16,7 +18,7 @@ const md: any = markdownit({
                                 hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
                             `</code>
                         </pre>`;
-            } catch (__) {}
+            } catch (error) {console.log(error)}
         }
         return `<div class="code-block">
             <pre><code class="hljs">` + md.utils.escapeHtml(str) + `</code></pre>

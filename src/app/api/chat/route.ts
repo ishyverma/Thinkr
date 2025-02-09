@@ -1,11 +1,8 @@
 import { google } from "@ai-sdk/google";
 import { smoothStream, streamText } from 'ai';
-import prisma from "@/db";
-import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   const { data } = await req.json()
-  const threadId = data.threadId
 
   const result = streamText({
     model: google('gemini-1.5-flash-002'),

@@ -11,7 +11,6 @@ import {
   Save,
   Search,
   Settings,
-  SquarePen,
   Trash,
   UserRound,
 } from "lucide-react";
@@ -31,9 +30,7 @@ import {
 
 import {
   Dialog,
-  DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -71,30 +68,8 @@ export function AppSidebar() {
   const { data: session, status } = useSession();
   const { toast } = useToast();
   const router = useRouter();
-  const [threadName, setThreadName] = useState("");
   const [allThreads, setAllThreads] = useState<ThreadType[]>();
   const [changedName, setChangedName] = useState("");
-
-  async function createThread() {
-    try {
-      const response = await axios.post("/api/thread", {
-        name: threadName,
-        userId: session?.user.id,
-      });
-      toast({
-        title: "Thread created 😊",
-        description: "Get ready to learn in a new way ",
-      });
-      location.reload();
-    } catch (error) {
-      const errorMessage = error as AxiosError;
-      toast({
-        title: "Oops! There were some error",
-        description: (errorMessage.response?.data as any).message,
-        variant: "destructive",
-      });
-    }
-  }
 
   async function getThreads() {
     try {
@@ -113,7 +88,7 @@ export function AppSidebar() {
 
   async function renameThread(id: string) {
     try {
-      const response = await axios.put("/api/thread", {
+      await axios.put("/api/thread", {
         name: changedName,
         id,
       });
@@ -123,6 +98,7 @@ export function AppSidebar() {
       });
       location.reload();
     } catch (error) {
+      console.log(error)
       toast({
         title: "Oops! There were some error",
         description: "Unable to rename Thread 🥲",
@@ -140,6 +116,7 @@ export function AppSidebar() {
       });
       location.reload();
     } catch (error) {
+      console.log(error)
       toast({
         title: "Oops! There were some error",
         description: "Unable to delete Thread 🥲",
@@ -220,7 +197,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
               <div className="mt-4"></div>
               {allThreads?.map((thread) => (
-                <SidebarMenuItem id={thread.id}>
+                <SidebarMenuItem key={thread.id}>
                   <SidebarMenuButton onClick={() => {
                     router.push(`/thread/${thread.id}`)
                   }}>

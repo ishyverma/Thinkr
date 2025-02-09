@@ -58,7 +58,7 @@ export async function GET(req: NextRequest) {
 export async function DELETE(req: NextRequest) {
   const id = req?.nextUrl?.searchParams.get('id') as string
   try {
-    const thread = await prisma.thread.delete({
+    await prisma.thread.delete({
       where: {
         id
       }
@@ -88,7 +88,7 @@ export async function PUT(req: NextRequest) {
   const { name, id } = parsedResult.data
 
   try {
-    const thread = await prisma.thread.update({
+    await prisma.thread.update({
       where: {
         id
       },

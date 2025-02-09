@@ -18,7 +18,7 @@ const Features = () => {
                                 </CollapsibleTrigger>
                                 <CollapsibleContent>
                                     <div className="mt-4">
-                                        Thinkr's advanced AI adapts to your needs, making learning interactive, intuitive, and deeply personalized—whether it's Math, Science, Coding, or beyond.
+                                        Thinkr&apos;s advanced AI adapts to your needs, making learning interactive, intuitive, and deeply personalized—whether it&apos;s Math, Science, Coding, or beyond.
                                     </div>
                                 </CollapsibleContent>
                             </div>
@@ -26,11 +26,11 @@ const Features = () => {
                         <Collapsible>
                             <div className="max-w-[500px] bg-[#e6e6f4]/60 p-5 rounded-lg cursor-pointer mt-5">
                                 <CollapsibleTrigger>
-                                    <div className="font-bold sm:text-2xl text-base text-[#1a5a8b]">What's Next?</div>
+                                    <div className="font-bold sm:text-2xl text-base text-[#1a5a8b]">What&apos;s Next?</div>
                                 </CollapsibleTrigger>
                                 <CollapsibleContent>
                                     <div className="mt-4">
-                                        Using Canvases, you'll be able to draw sketches, create graphs, and develop diagrams in real-time, taking personalized learning to the next level.
+                                        Using Canvases, you&apos;ll be able to draw sketches, create graphs, and develop diagrams in real-time, taking personalized learning to the next level.
                                     </div>
                                 </CollapsibleContent>
                             </div>

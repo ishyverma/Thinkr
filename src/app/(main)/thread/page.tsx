@@ -15,7 +15,8 @@ import { useRouter } from "next/navigation";
 
 const Thread = () => {
     const { data: session } = useSession();
-    let { messages, input, handleInputChange, handleSubmit, isLoading } = useChat();
+    let { messages, input, handleInputChange, handleSubmit } = useChat();
+    const { isLoading } = useChat();
     const router = useRouter();
     const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -70,7 +71,7 @@ const Thread = () => {
                         </div>}
                         <div className="sm:w-[55vw] w-[85vw]">
                             {messages.map(m => (
-                                <ChatBubble message={m.content} sentBy={`${m.role === 'user' ? "User" : "AI"}`} />
+                                <ChatBubble key={m.id} message={m.content} sentBy={`${m.role === 'user' ? "User" : "AI"}`} />
                             ))}
                         </div>
                     </div>

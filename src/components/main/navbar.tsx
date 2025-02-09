@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback } from "../ui/avatar";
 import Link from "next/link";
 import { LineShadowText } from "../magicui/line-shadow-text";
 import { useTheme } from "next-themes";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { House, LogOut, User } from "lucide-react";
 
 const Navbar = () => {

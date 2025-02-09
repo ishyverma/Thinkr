@@ -17,12 +17,11 @@ import {
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { SignInType, SignUpType } from "@/types/zod";
+import { SignInType } from "@/types/zod";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
 import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";

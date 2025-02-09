@@ -1,6 +1,5 @@
 import { cva } from "class-variance-authority";
 import Markdown from "./mardown";
-import AvatarImageComp from "./avatar";
 
 interface ChatBubbleProps {
     sentBy: "User" | "AI",
