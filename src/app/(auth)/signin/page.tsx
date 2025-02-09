@@ -4,6 +4,7 @@ import {
     Card,
     CardContent,
     CardDescription,
+    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
@@ -25,6 +26,7 @@ import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
+import Link from "next/link";
 
 const SignIn = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -118,6 +120,9 @@ const SignIn = () => {
                         </form>
                     </Form>
                 </CardContent>
+                <CardFooter className="flex justify-center items-center">
+                    <div>Don't have an account? <Link href={'/signup'} className="hover:underline">Sign up here</Link></div>
+                </CardFooter>
             </Card>
         </>
     );

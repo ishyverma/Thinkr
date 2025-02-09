@@ -4,6 +4,7 @@ import {
     Card,
     CardContent,
     CardDescription,
+    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
@@ -25,6 +26,7 @@ import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import axios, { AxiosError } from "axios";
 import { toast } from "@/hooks/use-toast";
+import Link from "next/link";
 
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -123,6 +125,9 @@ const SignUp = () => {
                         </form>
                     </Form>
                 </CardContent>
+                <CardFooter className="flex justify-center items-center">
+                    <div>Already have an account? <Link href={"/signin"} className="hover:underline">Login here</Link></div>
+                </CardFooter>
             </Card>
         </>
     );
