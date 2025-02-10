@@ -23,9 +23,11 @@ const FAQ = () => {
                 <h1>Have more questions? <Link href={'https://x.com/ishyverma'} target="_blank" className="underline">Contact Us</Link></h1>
             </div>
             <div className="mt-8">
-                <Button size={"lg"} className="text-xl dark:text-white text-white bg-[#1a5a8b] hover:bg-[#1a5a8b]/90 font-grotsek" variant={"secondary"}>
-                    Get Started <Send />
-                </Button>
+                <Link href={"/signin"}>
+                    <Button size={"lg"} className="text-xl dark:text-white text-white bg-[#1a5a8b] hover:bg-[#1a5a8b]/90 font-grotsek" variant={"secondary"}>
+                        Get Started <Send />
+                    </Button>
+                </Link>
             </div>
         </div>
     );

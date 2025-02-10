@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { Send } from "lucide-react";
 import { LineShadowText } from "../magicui/line-shadow-text";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export function GridBackgroundDemo() {
   const theme = useTheme();
@@ -23,9 +24,11 @@ export function GridBackgroundDemo() {
         </p>
         <span className="text-black -mt-2">A platform built for thinkers, creators, and visionaries like you.</span>
         <div className="mt-10 text-white">
-          <Button size={"lg"} className="text-xl dark:text-white text-white bg-[#1a5a8b] hover:bg-[#1a5a8b]/90 font-grotsek" variant={"secondary"}>
-            Get Started <Send />
-          </Button>
+          <Link href={"/signin"}>
+            <Button size={"lg"} className="text-xl dark:text-white text-white bg-[#1a5a8b] hover:bg-[#1a5a8b]/90 font-grotsek" variant={"secondary"}>
+              Get Started <Send />
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

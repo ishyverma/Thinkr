@@ -99,8 +99,8 @@ const Thread = () => {
                                     className="w-full h-16 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 pr-24 my-2 border dark:border-[#252527] border-[#E4E4E7]" 
                                 />
                                 <div className="absolute top-3 right-2">
-                                    <Button disabled={isLoading} className="px-2 flex gap-1 bg-black">
-                                        <div className="font-extrabold text-white">Ask</div>
+                                    <Button disabled={isLoading} className="px-2 flex gap-1">
+                                        <div className="font-extrabold text-white dark:text-black">Ask</div>
                                         <div>
                                             <div className="dark:bg-black bg-white px-3 py-[6px] rounded-lg">
                                                 <CornerDownLeft className="text-[#A1A1AA] h-6" />
