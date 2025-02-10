@@ -161,14 +161,6 @@ export function AppSidebar() {
                 </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <Link href={'/canvas'}>
-                  <SidebarMenuButton>
-                    <PaintbrushVertical className="w-5" />
-                    <span>Open Canvas</span>
-                  </SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
                 <Dialog>
                   <DialogTrigger asChild>
                     <SidebarMenuButton>

@@ -10,7 +10,7 @@ const VSEditor = () => {
             width={'100vw'} 
             theme='vs-dark' 
             defaultLanguage='typescript' 
-            defaultValue=''
+            defaultValue='// Hey There 👋'
         />
     );
 }
