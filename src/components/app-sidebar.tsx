@@ -54,6 +54,7 @@ import {
 } from "./ui/dropdown-menu";
 import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface ThreadType {
   id: string;
@@ -149,19 +150,23 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton>
-                  <span className="flex gap-2 items-center justify-start">
-                    <CodeXml className="w-5" />
-                    <span>Code</span>
-                    <ArrowUpRight className="w-5" />
-                  </span>
-                </SidebarMenuButton>
+                <Link href={'/editor'}>
+                  <SidebarMenuButton>
+                    <span className="flex gap-2 items-center justify-start">
+                      <CodeXml className="w-5" />
+                      <span>Code</span>
+                      <ArrowUpRight className="w-5" />
+                    </span>
+                  </SidebarMenuButton>
+                </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton>
-                  <PaintbrushVertical className="w-5" />
-                  <span>Open Canvas</span>
-                </SidebarMenuButton>
+                <Link href={'/canvas'}>
+                  <SidebarMenuButton>
+                    <PaintbrushVertical className="w-5" />
+                    <span>Open Canvas</span>
+                  </SidebarMenuButton>
+                </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <Dialog>
